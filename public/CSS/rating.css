@@ -186,7 +186,7 @@
   }
   .starability-slot > label::before, .starability-slot > label::after {
     display: none;
-  }
+   }
 }
 
 .starability-slot > input:checked ~ label,
