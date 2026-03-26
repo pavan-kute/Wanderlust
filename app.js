@@ -128,6 +128,9 @@ store.on("error", (err)=>{
 
 
      // Routes folder me listing path kiya
+     app.get("/", (req,res)=>{
+        res.redirect("/listings");
+     });
      app.use("/listings",listingRouter)  // jaha pr bhi listing routes aayega hum apan routes listing file ko send krenge
      app.use("/listings/:id/reviews",reviewsRouter)
      app.use("/",userRouter);
