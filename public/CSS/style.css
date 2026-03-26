@@ -226,7 +226,7 @@ p {
 }
 
 .nav-active-link {
-  background: red;
+  background: linear-gradient(135deg, var(--accent), var(--accent-deep));
   color: #ffffff !important;
   box-shadow: 0 10px 20px rgba(227, 91, 70, 0.2);
   border-color: rgba(255, 255, 255, 0.18) !important;
@@ -234,7 +234,7 @@ p {
 
 .nav-active-link:hover {
   color: #ffffff !important;
-  background: red;
+  background: linear-gradient(135deg, var(--accent), var(--accent-deep));
 }
 
 .nav-host-link {
