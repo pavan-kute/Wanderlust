@@ -1,4 +1,7 @@
-  
+<%
+  const user = typeof currUser !== "undefined" ? currUser : null;
+%>
+
    <style>
     .btn-search{
       background-color: #fe424d;
@@ -42,12 +45,12 @@
       <div class="navbar-nav ms-auto">
       <a class="nav-link" href="/listings/new">Airbnd your home</a>
 
-        <% if (!currUser) { %>
+        <% if (!user) { %>
         <a class="nav-link" href="/signup"><b>Sign up</b></a>
         <a class="nav-link" href="/login"><b>Log in</b></a>
         <% } %>
 
-        <% if (currUser) { %>
+        <% if (user) { %>
         <a class="nav-link" href="/logout"><b>Log out</b></a>
         <% } %>
       </div>
