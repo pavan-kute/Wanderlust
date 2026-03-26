@@ -1,60 +1,46 @@
 <%
   const user = typeof currUser !== "undefined" ? currUser : null;
+  const username = user && user.username ? user.username : "Traveler";
 %>
 
-   <style>
-    .btn-search{
-      background-color: #fe424d;
-      color: white;
-      border-radius: 22px;
-    }
-    .btn-search:hover{
-      background-color: #fe424d;
-      color: white;
-    }
+<nav class="navbar navbar-expand-lg site-navbar sticky-top">
+  <div class="container nav-shell">
+    <a class="navbar-brand brand-mark" href="/listings" aria-label="WanderLust home">
+      <span class="brand-icon"><i class="fa-regular fa-compass"></i></span>
+      <span class="brand-copy">
+        <span class="brand-title">WanderLust</span>
+        <span class="brand-tag">Beautiful stays for your next escape</span>
+      </span>
+    </a>
 
-    .search-inp {
-      border-radius: 25px ;
-      padding: 0.5rem 3rem 0.5rem 3rem;
-      font-size: 1rem;
-
-    }
-  
-   </style>
-
-
-<nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="/listings"><i class="fa-regular fa-compass"></i></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" >
+    <button class="navbar-toggler nav-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-link" href="/listings">Explore</a>
-      </div>
-      
-        <!-- Search bhar div -->
-      <div class="navbar-nav ms-auto">
-        <form class="d-flex" role="search">
-      <input class="form-control me-2 search-inp" type="search" placeholder="Search destinations" />
-      <button class="btn btn-search" type="submit">  Search</button>
-    </form>
+      <div class="navbar-nav nav-links">
+        <a class="nav-link nav-pill" href="/listings">Explore</a>
+        <a class="nav-link nav-pill" href="/listings/new">Host a stay</a>
       </div>
 
-      <div class="navbar-nav ms-auto">
-      <a class="nav-link" href="/listings/new">Airbnd your home</a>
+      <form class="nav-search ms-lg-auto" role="search" action="/listings" method="GET">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input class="form-control search-inp" type="search" name="q" placeholder="Search destinations" aria-label="Search destinations" />
+        <button class="btn btn-search" type="submit">Search</button>
+      </form>
+
+      <div class="navbar-nav nav-actions">
 
         <% if (!user) { %>
-        <a class="nav-link" href="/signup"><b>Sign up</b></a>
-        <a class="nav-link" href="/login"><b>Log in</b></a>
+        <a class="nav-link nav-pill nav-outline" href="/signup">Sign up</a>
+        <a class="nav-link nav-pill nav-solid" href="/login">Log in</a>
         <% } %>
 
         <% if (user) { %>
-        <a class="nav-link" href="/logout"><b>Log out</b></a>
+        <span class="user-chip">Hi, <%= username %></span>
+        <a class="nav-link nav-pill nav-solid" href="/logout">Log out</a>
         <% } %>
       </div>
-
     </div>
   </div>
 </nav>

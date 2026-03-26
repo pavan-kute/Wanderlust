@@ -1,24 +1,25 @@
 <% layout("layouts/boilerplate") %>
 
-<div class="row mt-3">
-    <h1  class="col-6 offset-3">Login</h1>
-  <div class="col-6 offset-3">
+<section class="form-shell auth-shell">
+  <div class="form-header">
+    <span class="eyebrow">Welcome back</span>
+    <h1>Log in to WanderLust</h1>
+    <p>Pick up where you left off and manage your stays in one place.</p>
+  </div>
 
 <form action="/login" method="POST" class="needs-validation" novalidate>
      <div class="mb-3">
-          <label for="username" class="form-label">Username </label>
-          <input name="username" class="form-control" type="text" id="username" required>   <!-- required means  titel hone he chahiye-->
-          <div class="valid-feedback">Looks good!</div>  <!--Using boostrap add suucess and failure for from-->
+          <label for="username" class="form-label">Username</label>
+          <input name="username" class="form-control" type="text" id="username" required>
+          <div class="valid-feedback">Looks good!</div>
          </div>
 
          <div class="mb-3">
-          <label for="password" class="form-label">Password </label>
-          <input name="password" class="form-control" type="text" id="password" required>   <!-- required means  titel hone he chahiye-->
+          <label for="password" class="form-label">Password</label>
+          <input name="password" class="form-control" type="password" id="password" required>
          </div>
 
-         <button class="btn btn-success">Login</button>
+         <button class="btn nav-solid auth-submit">Log in</button>
 
 </form>
-
-</div>    
-</div>
+</section>

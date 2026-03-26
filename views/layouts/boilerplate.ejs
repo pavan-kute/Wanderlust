@@ -12,17 +12,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/CSS/rating.css">
 </head>
-<body>
-  
-    <%- include("../includes/navbar.ejs") %>   <!--navbar file ko use krne ke include krna padta he-->
+<body class="site-body">
+    <%- include("../includes/navbar.ejs") %>
 
-    <div class="container"> 
-       <%- include("../includes/flash.ejs") %> 
-       
-        <%- body %>       <!-- use krta he sabi ejs page biolerplate syntax same  -->
-    </div>
-    <%- include("../includes/footer.ejs") %> 
-        
+    <main class="page-shell">
+      <div class="container app-shell">
+         <%- include("../includes/flash.ejs") %>
+         <%- body %>
+      </div>
+    </main>
+
+    <%- include("../includes/footer.ejs") %>
+
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
    <!-- boostrap links use krte hi font change hota he-->
     <script src="/js/script.js"></script>

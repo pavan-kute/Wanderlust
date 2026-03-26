@@ -1,29 +1,30 @@
 <% layout("layouts/boilerplate") %>
 
-<div class="row mt-3">
-    <h1  class="col-6 offset-3">SignUp on Wanderlust</h1>
-  <div class="col-6 offset-3">
+<section class="form-shell auth-shell">
+  <div class="form-header">
+    <span class="eyebrow">Join the community</span>
+    <h1>Sign up on WanderLust</h1>
+    <p>Create your account to save stays, post listings, and start traveling smarter.</p>
+  </div>
 
 <form action="/signup" method="POST" class="needs-validation" novalidate>
      <div class="mb-3">
-          <label for="username" class="form-label">Username </label>
-          <input name="username" class="form-control" type="text" id="username" required>   <!-- required means  titel hone he chahiye-->
-          <div class="valid-feedback">Looks good!</div>  <!--Using boostrap add suucess and failure for from-->
+          <label for="username" class="form-label">Username</label>
+          <input name="username" class="form-control" type="text" id="username" required>
+          <div class="valid-feedback">Looks good!</div>
          </div>
 
          <div class="mb-3">
-          <label for="email" class="form-label">Email </label>
-          <input name="email" class="form-control" type="text" id="email" required>   <!-- required means  titel hone he chahiye-->
+          <label for="email" class="form-label">Email</label>
+          <input name="email" class="form-control" type="email" id="email" required>
          </div>
 
          <div class="mb-3">
-          <label for="password" class="form-label">Password </label>
-          <input name="password" class="form-control" type="text" id="password" required>   <!-- required means  titel hone he chahiye-->
+          <label for="password" class="form-label">Password</label>
+          <input name="password" class="form-control" type="password" id="password" required>
          </div>
 
-         <button class="btn btn-success">SignUp</button>
+         <button class="btn nav-solid auth-submit">Create account</button>
 
 </form>
-
-</div>    
-</div>
+</section>
