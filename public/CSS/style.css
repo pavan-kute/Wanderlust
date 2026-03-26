@@ -219,7 +219,7 @@ p {
 
 .nav-active-link:hover {
   color: #ffffff !important;
-  background: linear-gradient(135deg, var(--accent-dark), #952c22);
+  background: linear-gradient(135deg, var(--accent), var(--accent-deep));
 }
 
 .nav-host-link {
