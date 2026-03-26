@@ -6,7 +6,9 @@
   --muted: #6b7280;
   --accent: #e35b46;
   --accent-dark: #c94d3a;
+  --accent-deep: #a93227;
   --accent-soft: #fff0e5;
+  --accent-line: rgba(227, 91, 70, 0.18);
   --success: #2e7d5a;
   --line: rgba(129, 91, 56, 0.12);
   --shadow-lg: 0 25px 60px rgba(24, 32, 56, 0.12);
@@ -184,8 +186,8 @@ p {
   margin-left: 1rem;
   padding: 0.35rem;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.7);
-  border: 1px solid rgba(129, 91, 56, 0.08);
+  background: rgba(255, 240, 229, 0.55);
+  border: 1px solid var(--accent-line);
 }
 
 .nav-links {
@@ -199,31 +201,31 @@ p {
 .nav-pill {
   border-radius: 999px;
   padding: 0.78rem 1.08rem !important;
-  color: var(--ink) !important;
+  color: var(--accent-deep) !important;
   font-weight: 700;
   letter-spacing: -0.01em;
 }
 
 .nav-pill:hover {
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 240, 229, 0.92);
   color: var(--accent-dark) !important;
 }
 
 .nav-active-link {
-  background: linear-gradient(135deg, #e35b46, #c2410c);
+  background: linear-gradient(135deg, var(--accent), var(--accent-deep));
   color: #ffffff !important;
   box-shadow: 0 10px 20px rgba(227, 91, 70, 0.2);
 }
 
 .nav-active-link:hover {
   color: #ffffff !important;
-  background: linear-gradient(135deg, #c94d3a, #9a3412);
+  background: linear-gradient(135deg, var(--accent-dark), #952c22);
 }
 
 .nav-host-link {
-  background: rgba(227, 91, 70, 0.1);
+  background: rgba(227, 91, 70, 0.12);
   color: var(--accent-dark) !important;
-  border: 1px solid rgba(227, 91, 70, 0.18);
+  border: 1px solid var(--accent-line);
 }
 
 .nav-search {
@@ -235,7 +237,7 @@ p {
   max-width: 390px;
   padding: 0.45rem 0.5rem 0.45rem 0.55rem;
   border-radius: 999px;
-  border: 1px solid var(--line);
+  border: 1px solid var(--accent-line);
   background: rgba(255, 255, 255, 0.96);
   box-shadow: 0 12px 26px rgba(24, 32, 56, 0.08);
 }
@@ -247,8 +249,8 @@ p {
   align-items: center;
   justify-content: center;
   border-radius: 999px;
-  background: rgba(247, 243, 236, 0.95);
-  color: var(--muted);
+  background: rgba(255, 240, 229, 0.95);
+  color: var(--accent-dark);
 }
 
 .search-inp {
@@ -266,7 +268,7 @@ p {
 .edit-btn {
   color: #fff !important;
   border: none !important;
-  background: linear-gradient(135deg, #e35b46, #f2854f) !important;
+  background: linear-gradient(135deg, var(--accent), var(--accent-deep)) !important;
   box-shadow: 0 14px 26px rgba(227, 91, 70, 0.24);
 }
 
@@ -279,12 +281,12 @@ p {
 .nav-solid:hover,
 .add-btn:hover,
 .edit-btn:hover {
-  background: linear-gradient(135deg, #c94d3a, #ea6d3f) !important;
+  background: linear-gradient(135deg, var(--accent-dark), #952c22) !important;
 }
 
 .nav-outline {
-  border: 1px solid rgba(227, 91, 70, 0.18);
-  background: rgba(255, 255, 255, 0.84);
+  border: 1px solid var(--accent-line);
+  background: rgba(255, 240, 229, 0.52);
   color: var(--accent-dark) !important;
 }
 
@@ -294,8 +296,8 @@ p {
   gap: 0.7rem;
   padding: 0.45rem 0.85rem 0.45rem 0.5rem;
   border-radius: 999px;
-  background: rgba(227, 91, 70, 0.08);
-  border: 1px solid rgba(227, 91, 70, 0.14);
+  background: rgba(255, 240, 229, 0.72);
+  border: 1px solid var(--accent-line);
   color: var(--ink);
   box-shadow: 0 10px 22px rgba(24, 32, 56, 0.06);
 }
@@ -307,7 +309,7 @@ p {
   align-items: center;
   justify-content: center;
   border-radius: 999px;
-  background: linear-gradient(135deg, #e35b46, #c2410c);
+  background: linear-gradient(135deg, var(--accent), var(--accent-deep));
   color: #fff;
   font-size: 0.78rem;
   font-weight: 800;
@@ -317,22 +319,22 @@ p {
 .user-name {
   font-size: 0.92rem;
   font-weight: 800;
-  color: var(--accent-dark);
+  color: var(--accent-deep);
 }
 
 .nav-logout {
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
-  background: rgba(227, 91, 70, 0.08);
-  border: 1px solid rgba(227, 91, 70, 0.18);
-  color: #b91c1c !important;
-  box-shadow: none;
+  background: rgba(255, 240, 229, 0.52);
+  border: 1px solid var(--accent-line);
+  color: var(--accent-deep) !important;
+  box-shadow: 0 10px 18px rgba(227, 91, 70, 0.08);
 }
 
 .nav-logout:hover {
-  background: rgba(227, 91, 70, 0.14) !important;
-  color: #991b1b !important;
+  background: linear-gradient(135deg, var(--accent), var(--accent-deep)) !important;
+  color: #ffffff !important;
 }
 
 .hero-banner {
