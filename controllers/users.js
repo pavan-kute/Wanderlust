@@ -36,7 +36,7 @@ module.exports.renderLoginForm = (req,res)=>{
 module.exports.login = async (req,res)=>{
      req.flash("success","Welcome back to Wanderlust !");  // password authetication automatic passowd wrong msg deta
      let redirectUrl = res.locals.redirectUrl || "/listings";
-     res.redirect(redirectUrl);  
+     res.redirect(redirectUrl);  // jo path pr login kiya hoi openjoe login krne ke bhad
   }
 
      // logout

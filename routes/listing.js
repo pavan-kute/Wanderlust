@@ -5,7 +5,7 @@ const Listing = require ("../models/listing.js");
 const {isLoggedIn,isOwner,validateListing} = require("../middleware.js");
 const { populate } = require('../models/review.js');
 const { authorize } = require('passport');
-const multer  = require('multer')   // multer npm package use for pasring data file img uploads
+const multer  = require('multer')   // multernpm package use for pasring data file img uploads
 const {storage} = require("../cloudConfig.js");
 const upload = multer({storage})
 
