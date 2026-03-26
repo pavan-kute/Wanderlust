@@ -226,16 +226,16 @@ p {
 }
 
 .nav-active-link {
-  background: linear-gradient(135deg, var(--accent), var(--accent-deep));
-  color: #ffffff !important;
-  box-shadow: 0 10px 20px rgba(227, 91, 70, 0.2);
-  border-color: rgba(255, 255, 255, 0.18) !important;
+  background: transparent;
+  color: var(--accent-deep) !important;
+  box-shadow: none;
+  border-color: transparent !important;
 }
 
 .nav-active-link:hover {
-  color: #ffffff !important;
-  background: linear-gradient(135deg, var(--accent), var(--accent-deep));
-  box-shadow: 0 10px 20px rgba(227, 91, 70, 0.2);
+  color: var(--accent-deep) !important;
+  background: transparent;
+  box-shadow: none;
   transform: none;
 }
 
