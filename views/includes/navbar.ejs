@@ -15,7 +15,7 @@
       <span class="brand-icon"><i class="fa-regular fa-compass"></i></span>
       <span class="brand-copy">
         <span class="brand-title">WanderLust</span>
-        <span class="brand-tag">Beautiful stays for your next escape</span>
+        <span class="brand-tag">Curated stays</span>
       </span>
     </a>
 
@@ -24,9 +24,11 @@
     </button>
 
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav nav-links">
-        <a class="nav-link nav-pill" href="/listings">Explore</a>
-        <a class="nav-link nav-pill nav-host-link" href="/listings/new">Host a stay</a>
+      <div class="nav-links-wrap">
+        <div class="navbar-nav nav-links">
+          <a class="nav-link nav-pill nav-active-link" href="/listings">Explore</a>
+          <a class="nav-link nav-pill nav-host-link" href="/listings/new">Become a host</a>
+        </div>
       </div>
 
       <form class="nav-search ms-lg-auto" role="search" action="/listings" method="GET">
@@ -46,11 +48,11 @@
         <div class="user-chip">
           <span class="user-avatar"><%= initials %></span>
           <span class="user-meta">
-            <small>Signed in</small>
             <strong><%= username %></strong>
+            <small>Account</small>
           </span>
         </div>
-        <a class="nav-link nav-pill nav-logout" href="/logout">Log out</a>
+        <a class="nav-link nav-pill nav-logout" href="/logout"><i class="fa-solid fa-arrow-right-from-bracket"></i> Log out</a>
         <% } %>
       </div>
     </div>
