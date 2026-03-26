@@ -1,6 +1,12 @@
 <%
   const user = typeof currUser !== "undefined" ? currUser : null;
   const username = user && user.username ? user.username : "Traveler";
+  const initials = username
+    .split(" ")
+    .map((part) => part[0])
+    .join("")
+    .slice(0, 2)
+    .toUpperCase();
 %>
 
 <nav class="navbar navbar-expand-lg site-navbar sticky-top">
@@ -20,11 +26,11 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav nav-links">
         <a class="nav-link nav-pill" href="/listings">Explore</a>
-        <a class="nav-link nav-pill" href="/listings/new">Host a stay</a>
+        <a class="nav-link nav-pill nav-host-link" href="/listings/new">Host a stay</a>
       </div>
 
       <form class="nav-search ms-lg-auto" role="search" action="/listings" method="GET">
-        <i class="fa-solid fa-magnifying-glass"></i>
+        <span class="search-icon-wrap"><i class="fa-solid fa-magnifying-glass"></i></span>
         <input class="form-control search-inp" type="search" name="q" placeholder="Search destinations" aria-label="Search destinations" />
         <button class="btn btn-search" type="submit">Search</button>
       </form>
@@ -37,8 +43,14 @@
         <% } %>
 
         <% if (user) { %>
-        <span class="user-chip">Hi, <%= username %></span>
-        <a class="nav-link nav-pill nav-solid" href="/logout">Log out</a>
+        <div class="user-chip">
+          <span class="user-avatar"><%= initials %></span>
+          <span class="user-meta">
+            <small>Signed in</small>
+            <strong><%= username %></strong>
+          </span>
+        </div>
+        <a class="nav-link nav-pill nav-logout" href="/logout">Log out</a>
         <% } %>
       </div>
     </div>
