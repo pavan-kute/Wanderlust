@@ -47,10 +47,7 @@
         <% if (user) { %>
         <div class="user-chip">
           <span class="user-avatar"><%= initials %></span>
-          <span class="user-meta">
-            <strong><%= username %></strong>
-            <small>Account</small>
-          </span>
+          <strong class="user-name"><%= username %></strong>
         </div>
         <a class="nav-link nav-pill nav-logout" href="/logout"><i class="fa-solid fa-arrow-right-from-bracket"></i> Log out</a>
         <% } %>
